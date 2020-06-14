@@ -1,1 +1,13 @@
-<p>protegida works!</p>
+<h1>Perfil de usuario</h1>
+
+<div class="card" style="width: 18rem;" *ngIf="auth.userProfile$ | async as profile">
+    <img [src]="profile.picture" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{ profile.name }}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>Email:</b> {{ profile.email }}</li>
+      <li class="list-group-item"><b>Nickname:</b> {{ profile.nickname }} </li>
+      <li class="list-group-item"><b>Updated at:</b> {{ profile.updated_at }} </li>
+    </ul>
+  </div>
