@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="jumbotron">
+    <h1 class="display-4">¡Bienvenido!</h1>
+    <p class="lead">Este es un website simple para probar la autenticacion con Auth0. Inicia sesión para probarlo</p>
+    <hr class="my-4">
+    <div *ngIf="auth.loggedIn">
+        <p>Ya te encuentras logueado</p>
+        <a class="btn btn-primary btn-lg" routerLink="/protegida">Ver mi información</a>
+    </div>
+  </div>
